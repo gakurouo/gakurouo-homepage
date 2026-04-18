@@ -1,171 +1,312 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PHOTOS ZUSHI / 逗子写真</title>
-<link REL="stylesheet" HREF="../css/default.css" TYPE="text/css">
-<link REL="stylesheet" HREF="../css/lightbox.css" TYPE="text/css">
+<link rel="stylesheet" href="../css/default.css" type="text/css">
+<link rel="stylesheet" href="../css/lightbox.css" type="text/css">
 <script type="text/javascript" src="../js/lightbox.js"></script>
+<style>
+/* ===========================
+   レスポンシブ対応 - zushi.html
+=========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   ラッパー
+=========================== */
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 30px 16px 60px;
+}
+
+/* ===========================
+   タイトルバー
+=========================== */
+.page-title {
+  background-color: #006699;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.page-title-inner {
+  text-align: center;
+  padding: 18px 16px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page-title-inner b {
+  font-size: 17px;
+  letter-spacing: 0.04em;
+}
+
+/* ===========================
+   ページ内ナビ（ボタン風）
+=========================== */
+.page-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.page-nav a {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1.5px solid #3236ea;
+  border-radius: 20px;
+  color: #3236ea;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+
+.page-nav a:hover,
+.page-nav a:active {
+  background-color: #3236ea;
+  color: #ffffff;
+}
+
+/* ===========================
+   セクション
+=========================== */
+.section {
+  background-color: #669900;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 36px;
+}
+
+.section-inner {
+  background-color: #ffffff;
+  border-radius: 2px;
+  padding: 20px 16px;
+}
+
+.section-heading {
+  font-size: 15px;
+  font-weight: bold;
+  color: #006666;
+  margin: 0 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #e0e0e0;
+  letter-spacing: 0.03em;
+}
+
+/* ===========================
+   写真＋コメント（1カラム）
+=========================== */
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.photo-item:last-child {
+  margin-bottom: 0;
+}
+
+.photo-item a {
+  display: block;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.photo-caption {
+  font-size: 14px;
+  color: #006666;
+  line-height: 1.7;
+  padding: 2px 4px;
+}
+</style>
 </head>
 
 <body>
+<div class="page-wrap">
 
-<!--TITLE-->
-<div style="margin-top:30px;" ALIGN="center">
-<table CELLSPACING=0 cellPadding=0 width="90%" bgColor=#006699 border=0><tr><td>
-<table WIDTH="100%">
-<tr><td ALIGN="center" height="60">
-<b>ZUSHI IN SUMMER / 逗子会</b><br>AUG 2, 2008
-</td></tr>
-</table>
-</td></tr></table>
-</div>
-<!--/TITLE-->
+  <!-- タイトル -->
+  <div class="page-title">
+    <div class="page-title-inner">
+      <b>ZUSHI IN SUMMER / 逗子会</b><br>
+      AUG 2, 2008
+    </div>
+  </div>
 
+  <!-- ページ内ナビ -->
+  <nav class="page-nav">
+    <a href="#01">海に行く</a>
+    <a href="#02">バーベキュー</a>
+  </nav>
 
-<!--contents-->
-<div style="margin-top:30px; margin-right:5%" ALIGN="right">
-<a HREF="#01">海に行く</a>
-｜<a HREF="#02">バーベキュー</a>
-</div>
-<!--/contents-->
+  <!-- section01 -->
+  <section class="section" id="01">
+    <div class="section-inner">
+      <h2 class="section-heading">Go To The Sea / 海に行く</h2>
 
+      <div class="photo-item">
+        <a href="zsh/m-KICX1067.jpg" rel="lightbox"><img src="zsh/s-KICX1067.jpg" alt="海に来た人たち"></a>
+        <p class="photo-caption">海に来た人たち</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1068.jpg" rel="lightbox"><img src="zsh/s-KICX1068.jpg" alt="逗子の海ですよ"></a>
+        <p class="photo-caption">逗子の海ですよ<br>キマグレンの海ですよ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1070.jpg" rel="lightbox"><img src="zsh/s-KICX1070.jpg" alt="はしゃぐとー"></a>
+        <p class="photo-caption">はしゃぐとー</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1072.jpg" rel="lightbox"><img src="zsh/s-KICX1072.jpg" alt="ぬれるよー"></a>
+        <p class="photo-caption">ぬれるよー</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1073.jpg" rel="lightbox"><img src="zsh/s-KICX1073.jpg" alt="すごく遠浅の海でした"></a>
+        <p class="photo-caption">すごく遠浅の海でした</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1075.jpg" rel="lightbox"><img src="zsh/s-KICX1075.jpg" alt="海辺のカフカ"></a>
+        <p class="photo-caption">「ノルウェイの森」映画化記念<br>わざとらしくも「海辺のカフカ」</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1078.jpg" rel="lightbox"><img src="zsh/s-KICX1078.jpg" alt="ヤドカリがいたよー"></a>
+        <p class="photo-caption">ヤドカリがいたよー</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1079.jpg" rel="lightbox"><img src="zsh/s-KICX1079.jpg" alt="背中がめっちゃヒリヒリ"></a>
+        <p class="photo-caption">背中がめっちゃヒリヒリ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1080.jpg" rel="lightbox"><img src="zsh/s-KICX1080.jpg" alt="正直、やってます"></a>
+        <p class="photo-caption">正直、やってます</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1081.jpg" rel="lightbox"><img src="zsh/s-KICX1081.jpg" alt="残念、やってません"></a>
+        <p class="photo-caption">残念、やってません</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1083.jpg" rel="lightbox"><img src="zsh/s-KICX1083.jpg" alt="由緒正しい海のメシ"></a>
+        <p class="photo-caption">由緒正しい海のメシ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1084.jpg" rel="lightbox"><img src="zsh/s-KICX1084.jpg" alt="そういえばベルギー行ったＫ保ちゃん元気かなあ"></a>
+        <p class="photo-caption">そういえばベルギー行ったＫ保ちゃん元気かなあ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1085.jpg" rel="lightbox"><img src="zsh/s-KICX1085.jpg" alt="遊びつかれて喫茶中"></a>
+        <p class="photo-caption">…ということで遊びつかれて喫茶中</p>
+      </div>
+    </div>
+  </section>
 
-<!--section01-->
-<div style="margin-top:30px;" ALIGN="center">
-<table CELLSPACING=0 cellPadding=0 width="90%" bgColor=#669900 border=0>
-  <tbody>
-  <tr>
-    <td>
-      <center>
-      <table cellSpacing=3 cellPadding=10 width="100%" border=0>
-        <tbody>
-          <tr>
-            <td BGCOLOR=white>
-              <table CELLSPACING="10" CELLPADDING="10" WIDTH="100%">
-                <tr>
-                  <td><a NAME="01"><b>Go To The Sea / 海に行く</b></a></td>
-                </tr>
-                <tr>
-                  <td>
-                    <table WIDTH="100%">
-                      <tr>
-                        <td WIDTH="256px"></td>
-                        <td WIDTH="100%"></td>
-                        <td WIDTH="256px"></td>
-                      </tr>
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">海に来た人たち</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1067.jpg" rel="lightbox"><img src="zsh/s-KICX1067.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1068.jpg" rel="lightbox"><img src="zsh/s-KICX1068.jpg"></a></td></tr></table></td><td COLSPAN="2">逗子の海ですよ<br><a href="http://www.kimaguren.com/" target="_blank">キマグレン</a>の海ですよ（音が出るよ注意！）</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">はしゃぐとー</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1070.jpg" rel="lightbox"><img src="zsh/s-KICX1070.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1072.jpg" rel="lightbox"><img src="zsh/s-KICX1072.jpg"></a></td></tr></table></td><td COLSPAN="2">ぬれるよー</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">すごく遠浅の海でした</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1073.jpg" rel="lightbox"><img src="zsh/s-KICX1073.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1075.jpg" rel="lightbox"><img src="zsh/s-KICX1075.jpg"></a></td></tr></table></td><td COLSPAN="2">「ノルウェイの森」映画化記念<br>わざとらしくも「海辺のカフカ」</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">ヤドカリがいたよー</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1078.jpg" rel="lightbox"><img src="zsh/s-KICX1078.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1079.jpg" rel="lightbox"><img src="zsh/s-KICX1079.jpg"></a></td></tr></table></td><td COLSPAN="2">背中がめっちゃヒリヒリ</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">正直、やってます</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1080.jpg" rel="lightbox"><img src="zsh/s-KICX1080.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1081.jpg" rel="lightbox"><img src="zsh/s-KICX1081.jpg"></a></td></tr></table></td><td COLSPAN="2">残念、やってません</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">由緒正しい海のメシ</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1083.jpg" rel="lightbox"><img src="zsh/s-KICX1083.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1084.jpg" rel="lightbox"><img src="zsh/s-KICX1084.jpg"></a></td></tr></table></td><td COLSPAN="2">そういえばベルギー行ったＫ保ちゃん元気かなあ</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">…ということで遊びつかれて喫茶中</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1085.jpg" rel="lightbox"><img src="zsh/s-KICX1085.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </center>
-    </td>
-  </tr>
-  </tbody>
-</table>
-</div>
-<!--/section01-->
+  <!-- ページ内ナビ（中間） -->
+  <nav class="page-nav">
+    <a href="#01">海に行く</a>
+    <a href="#02">バーベキュー</a>
+  </nav>
 
+  <!-- section02 -->
+  <section class="section" id="02">
+    <div class="section-inner">
+      <h2 class="section-heading">Cook-out / バーベキュー</h2>
 
-<!--contents-->
-<div style="margin-top:30px; margin-right:5%" ALIGN="right">
-<a HREF="#01">海に行く</a>
-｜<a HREF="#02">バーベキュー</a>
-</div>
-<!--/contents-->
+      <div class="photo-item">
+        <a href="zsh/m-KICX1087.jpg" rel="lightbox"><img src="zsh/s-KICX1087.jpg" alt="後半バーベキューがんばりまーす"></a>
+        <p class="photo-caption">後半バーベキューがんばりまーす</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1089.jpg" rel="lightbox"><img src="zsh/s-KICX1089.jpg" alt="野菜とかめっさ切りまーす"></a>
+        <p class="photo-caption">野菜とかめっさ切りまーす</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1090.jpg" rel="lightbox"><img src="zsh/s-KICX1090.jpg" alt="鮮やか夏のトウモロコシ"></a>
+        <p class="photo-caption">鮮やか夏のトウモロコシ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1091.jpg" rel="lightbox"><img src="zsh/s-KICX1091.jpg" alt="タマネギとれたてキュウリナス"></a>
+        <p class="photo-caption">タマネギとれたてキュウリナス</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1093.jpg" rel="lightbox"><img src="zsh/s-KICX1093.jpg" alt="Ｓ藤 a.k.a. やすら君が沢山焼いてくれました"></a>
+        <p class="photo-caption">Ｓ藤 a.k.a. やすら君が沢山焼いてくれました</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1094.jpg" rel="lightbox"><img src="zsh/s-KICX1094.jpg" alt="山の方からは蝉の声"></a>
+        <p class="photo-caption">山の方からは蝉の声</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1096.jpg" rel="lightbox"><img src="zsh/s-KICX1096.jpg" alt="ホッケ焼きました２枚"></a>
+        <p class="photo-caption">ホッケ焼きました２枚</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1097.jpg" rel="lightbox"><img src="zsh/s-KICX1097.jpg" alt="いいぐあいに酔っぱらったちゅうわけです"></a>
+        <p class="photo-caption">いいぐあいに酔っぱらったちゅうわけです</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1098.jpg" rel="lightbox"><img src="zsh/s-KICX1098.jpg" alt="日も暮れて家中でヤキソバ食べて"></a>
+        <p class="photo-caption">日も暮れて家中でヤキソバ食べて</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1099.jpg" rel="lightbox"><img src="zsh/s-KICX1099.jpg" alt="夏の夜の彩り"></a>
+        <p class="photo-caption">夏の夜の彩り</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1100.jpg" rel="lightbox"><img src="zsh/s-KICX1100.jpg" alt="手元からシュバー！"></a>
+        <p class="photo-caption">手元からシュバー！</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1102.jpg" rel="lightbox"><img src="zsh/s-KICX1102.jpg" alt="ちんまりと風情を噛みしめつつ"></a>
+        <p class="photo-caption">ちんまりと風情を噛みしめつつ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1107.jpg" rel="lightbox"><img src="zsh/s-KICX1107.jpg" alt="口元からシュバー！"></a>
+        <p class="photo-caption">口元からシュバー！</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1110.jpg" rel="lightbox"><img src="zsh/s-KICX1110.jpg" alt="ずどんと昇る火柱を仰ぎつつ"></a>
+        <p class="photo-caption">ずどんと昇る火柱を仰ぎつつ</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1111.jpg" rel="lightbox"><img src="zsh/s-KICX1111.jpg" alt="頭頂からシュバー！"></a>
+        <p class="photo-caption">頭頂からシュバー！</p>
+      </div>
+      <div class="photo-item">
+        <a href="zsh/m-KICX1114.jpg" rel="lightbox"><img src="zsh/s-KICX1114.jpg" alt="おみやげベルギーチョコでおしまい"></a>
+        <p class="photo-caption">おみやげベルギーチョコでおしまい</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- ページ内ナビ（末尾） -->
+  <nav class="page-nav">
+    <a href="#01">海に行く</a>
+    <a href="#02">バーベキュー</a>
+  </nav>
 
-
-<!--section02-->
-<div style="margin-top:30px;" ALIGN="center">
-<table CELLSPACING=0 cellPadding=0 width="90%" bgColor=#669900 border=0>
-  <tbody>
-  <tr>
-    <td>
-      <center>
-      <table cellSpacing=3 cellPadding=10 width="100%" border=0>
-        <tbody>
-          <tr>
-            <td BGCOLOR=white>
-              <table CELLSPACING="10" CELLPADDING="10" WIDTH="100%">
-                <tr>
-                  <td><a NAME="02"><b>Cook-out / バーベキュー</b></a></td>
-                </tr>
-                <tr>
-                  <td>
-                    <table WIDTH="100%">
-                      <tr>
-                        <td WIDTH="256px"></td>
-                        <td WIDTH="100%"></td>
-                        <td WIDTH="256px"></td>
-                      </tr>
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1087.jpg" rel="lightbox"><img src="zsh/s-KICX1087.jpg"></a></td></tr></table></td><td COLSPAN="2">後半バーベキューがんばりまーす</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">野菜とかめっさ切りまーす</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1089.jpg" rel="lightbox"><img src="zsh/s-KICX1089.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1090.jpg" rel="lightbox"><img src="zsh/s-KICX1090.jpg"></a></td></tr></table></td><td COLSPAN="2">鮮やか夏のトウモロコシ</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">タマネギとれたてキュウリナス</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1091.jpg" rel="lightbox"><img src="zsh/s-KICX1091.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1093.jpg" rel="lightbox"><img src="zsh/s-KICX1093.jpg"></a></td></tr></table></td><td COLSPAN="2">Ｓ藤 a.k.a. やすら君が沢山焼いてくれました</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">山の方からは蝉の声</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1094.jpg" rel="lightbox"><img src="zsh/s-KICX1094.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1096.jpg" rel="lightbox"><img src="zsh/s-KICX1096.jpg"></a></td></tr></table></td><td COLSPAN="2">ホッケ焼きました２枚</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">いいぐあいに酔っぱらったちゅうわけです</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1097.jpg" rel="lightbox"><img src="zsh/s-KICX1097.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1098.jpg" rel="lightbox"><img src="zsh/s-KICX1098.jpg"></a></td></tr></table></td><td COLSPAN="2">日も暮れて家中でヤキソバ食べて</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">夏の夜の彩り</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1099.jpg" rel="lightbox"><img src="zsh/s-KICX1099.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1100.jpg" rel="lightbox"><img src="zsh/s-KICX1100.jpg"></a></td></tr></table></td><td COLSPAN="2">手元からシュバー！</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">ちんまりと風情を噛みしめつつ</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1102.jpg" rel="lightbox"><img src="zsh/s-KICX1102.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1107.jpg" rel="lightbox"><img src="zsh/s-KICX1107.jpg"></a></td></tr></table></td><td COLSPAN="2">口元からシュバー！</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">ずどんと昇る火柱を仰ぎつつ</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1110.jpg" rel="lightbox"><img src="zsh/s-KICX1110.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-<!--pic.left--><tr ALIGN="left"><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1111.jpg" rel="lightbox"><img src="zsh/s-KICX1111.jpg"></a></td></tr></table></td><td COLSPAN="2">頭頂からシュバー！</td></tr><!--/pic.left-->
-<!--pic.right--><tr ALIGN="right"><td COLSPAN="2">おみやげベルギーチョコでおしまい</td><td><table CLASS="PIC"><tr><td ALIGN="center"><a href="zsh/m-KICX1114.jpg" rel="lightbox"><img src="zsh/s-KICX1114.jpg"></a></td></tr></table></td></tr><!--/pic.right-->
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </center>
-    </td>
-  </tr>
-  </tbody>
-</table>
-</div>
-<!--/section02-->
-
-
-
-
-
-
-
-
-<!--contents-->
-<div style="margin-top:30px; margin-right:5%" ALIGN="right">
-<a HREF="#01">海に行く</a>
-｜<a HREF="#02">バーベキュー</a>
-</div>
-<!--/contents-->
-
-
-
-
-
-
+</div><!-- /page-wrap -->
 </body>
 </html>
